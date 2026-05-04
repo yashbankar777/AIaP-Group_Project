@@ -17,10 +17,11 @@ The Streamlit app is treated as a separate group demo and is ignored by Git. The
 06_GenAI_Responsible_AI/      Member 6
 shared/                       Shared schemas and sample handoff files
 report_assets/                Tables and figures for the final report
+docs/                         Planning documents and report outline
 LIAR_dataset/                 Source dataset
 ```
 
-The older root-level notebooks `02_Knowledge_graph_reasoning.ipynb` and `03_Bayesian_reasoning.ipynb` are legacy placeholders. New work should go into the numbered folders above.
+New work should go into the numbered folders above. Planning documents are kept in `docs/` so the repository root stays clean.
 
 ## Contribution Split
 
@@ -80,4 +81,4 @@ See [shared/schemas.md](shared/schemas.md) for the agreed JSON fields and sample
 
 ## Report Planning
 
-See [PROJECT_STRUCTURE_AND_TASKS.md](PROJECT_STRUCTURE_AND_TASKS.md) and [REPORT_OUTLINE.md](REPORT_OUTLINE.md).
+See [docs/PROJECT_STRUCTURE_AND_TASKS.md](docs/PROJECT_STRUCTURE_AND_TASKS.md), [docs/REPORT_OUTLINE.md](docs/REPORT_OUTLINE.md), and [docs/AIaP_Group_Project_Structure_and_Contribution_Plan.docx](docs/AIaP_Group_Project_Structure_and_Contribution_Plan.docx).
