@@ -1,0 +1,18 @@
+[
+  {
+    "claim_id": "sample-001",
+    "probability_true": 0.09,
+    "probability_false": 0.91,
+    "final_verdict": "likely false",
+    "decision_confidence": 0.82,
+    "reasoning": "High extraction confidence combined with KG contradiction evidence."
+  },
+  {
+    "claim_id": "sample-002",
+    "probability_true": 0.86,
+    "probability_false": 0.14,
+    "final_verdict": "likely true",
+    "decision_confidence": 0.72,
+    "reasoning": "High extraction confidence combined with KG support evidence."
+  }
+]

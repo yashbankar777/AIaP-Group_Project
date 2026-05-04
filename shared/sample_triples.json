@@ -1,0 +1,28 @@
+[
+  {
+    "claim_id": "sample-001",
+    "raw_claim": "OpenAI was founded in 2020.",
+    "label": "false",
+    "speaker": "sample-speaker",
+    "subject": "OpenAI",
+    "subject_type": "ORG",
+    "relation": "founded_in",
+    "object": "2020",
+    "object_type": "DATE",
+    "date": "2020",
+    "extraction_confidence": 0.89
+  },
+  {
+    "claim_id": "sample-002",
+    "raw_claim": "Barack Obama was President of the United States.",
+    "label": "true",
+    "speaker": "sample-speaker",
+    "subject": "Barack Obama",
+    "subject_type": "PER",
+    "relation": "position_held",
+    "object": "President of the United States",
+    "object_type": "MISC",
+    "date": null,
+    "extraction_confidence": 0.92
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "claim_id": "sample-001",
+    "kg_status": "contradicted",
+    "kg_confidence": 0.88,
+    "evidence": "Wikidata inception year for OpenAI is 2015, which conflicts with 2020.",
+    "reasoning_rule": "founded_in_year_mismatch",
+    "source": "sample KG evidence"
+  },
+  {
+    "claim_id": "sample-002",
+    "kg_status": "supported",
+    "kg_confidence": 0.84,
+    "evidence": "Wikidata lists Barack Obama as holding the position President of the United States.",
+    "reasoning_rule": "entity_property_match",
+    "source": "sample KG evidence"
+  }
+]

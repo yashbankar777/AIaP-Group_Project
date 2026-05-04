@@ -1,0 +1,26 @@
+[
+  {
+    "claim_id": "sample-001",
+    "raw_claim": "OpenAI was founded in 2020.",
+    "subject": "OpenAI",
+    "subject_kg_id": "Q21708200",
+    "relation": "founded_in",
+    "property_id": "P571",
+    "object": "2020",
+    "object_kg_id": null,
+    "linking_confidence": 0.86,
+    "linking_notes": "OpenAI linked to Wikidata entity; year object does not require entity ID."
+  },
+  {
+    "claim_id": "sample-002",
+    "raw_claim": "Barack Obama was President of the United States.",
+    "subject": "Barack Obama",
+    "subject_kg_id": "Q76",
+    "relation": "position_held",
+    "property_id": "P39",
+    "object": "President of the United States",
+    "object_kg_id": "Q11696",
+    "linking_confidence": 0.91,
+    "linking_notes": "Both subject and object linked to Wikidata entities."
+  }
+]

@@ -1,0 +1,16 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.streamlit/
+.DS_Store
+
+# Local/demo app files. The Streamlit app is a group demo, not part of the
+# official assignment contribution structure.
+streamlit_app.py
+inference_engine.py
+
+# Local document-generation helpers and render artifacts.
+scripts/build_group_structure_doc.py
+report_assets/docx_render/
+~$*.docx
