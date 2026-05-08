@@ -1,0 +1,75 @@
+{
+  "input_path": "/Users/shanusharma/AIaP-Group_Project/01_Claim_Extraction/extracted_triples_filtered.json",
+  "output_path": "/Users/shanusharma/AIaP-Group_Project/03_Entity_Linking_KR/linked_entities.json",
+  "total_claims": 500,
+  "subjects_linked": 239,
+  "objects_linked": 82,
+  "records_with_any_entity_link": 273,
+  "relations_with_property_id": 1,
+  "average_linking_confidence": 0.373,
+  "low_confidence_records_below_0_4": 253,
+  "manual_subject_links": 70,
+  "manual_object_links": 21,
+  "top_relations": [
+    {
+      "relation": "say",
+      "count": 99
+    },
+    {
+      "relation": "be",
+      "count": 72
+    },
+    {
+      "relation": "have",
+      "count": 26
+    },
+    {
+      "relation": "support",
+      "count": 8
+    },
+    {
+      "relation": "vote",
+      "count": 8
+    },
+    {
+      "relation": "take",
+      "count": 5
+    },
+    {
+      "relation": "cut",
+      "count": 5
+    },
+    {
+      "relation": "go",
+      "count": 5
+    },
+    {
+      "relation": "on",
+      "count": 4
+    },
+    {
+      "relation": "have be",
+      "count": 4
+    },
+    {
+      "relation": "want",
+      "count": 4
+    },
+    {
+      "relation": "try",
+      "count": 4
+    },
+    {
+      "relation": "pay",
+      "count": 4
+    },
+    {
+      "relation": "offer",
+      "count": 3
+    },
+    {
+      "relation": "make",
+      "count": 3
+    }
+  ]
+}
