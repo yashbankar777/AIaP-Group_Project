@@ -28,8 +28,20 @@ This module explains the real-world problem and analyses the LIAR dataset before
 - dataset summary table
 - label distribution figure
 - preprocessing notes
-- optional `dataset_summary.json`
-- report-ready figures in `figures/` or `../report_assets/figures/`
+- `dataset_summary.json`
+- `preprocessing_notes.md`
+- report-ready tables in `../report_assets/tables/`
+- report-ready figures in `figures/` and `../report_assets/figures/`
+
+## How to Run
+
+From the repository root:
+
+```bash
+python3 02_Problem_Dataset_EDA/run_eda.py
+```
+
+The notebook `dataset_eda.ipynb` uses the same runner and can be opened to review the analysis step by step.
 
 ## Report Sections Supported
 

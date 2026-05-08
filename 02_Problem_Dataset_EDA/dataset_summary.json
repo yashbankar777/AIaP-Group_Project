@@ -1,0 +1,195 @@
+{
+  "dataset": "LIAR",
+  "source_files": [
+    "train.tsv",
+    "valid.tsv",
+    "test.tsv"
+  ],
+  "total_rows": 12791,
+  "rows_by_split": {
+    "train": 10240,
+    "valid": 1284,
+    "test": 1267
+  },
+  "label_order": [
+    "pants-fire",
+    "false",
+    "barely-true",
+    "half-true",
+    "mostly-true",
+    "true"
+  ],
+  "overall_label_distribution": {
+    "pants-fire": 1047,
+    "false": 2507,
+    "barely-true": 2103,
+    "half-true": 2627,
+    "mostly-true": 2454,
+    "true": 2053
+  },
+  "duplicate_statement_count": 26,
+  "duplicate_statement_percent": 0.2,
+  "duplicate_id_count": 0,
+  "missing_values": {
+    "statement_id": 0,
+    "label": 0,
+    "statement": 0,
+    "subjects": 2,
+    "speaker": 2,
+    "speaker_job": 3566,
+    "state": 2748,
+    "party": 2,
+    "barely_true_count": 0,
+    "false_count": 0,
+    "half_true_count": 0,
+    "mostly_true_count": 0,
+    "pants_fire_count": 0,
+    "context": 131
+  },
+  "mean_statement_words": 18.04,
+  "median_statement_words": 17.0,
+  "top_speakers": [
+    {
+      "speaker": "barack-obama",
+      "count": 611
+    },
+    {
+      "speaker": "donald-trump",
+      "count": 343
+    },
+    {
+      "speaker": "hillary-clinton",
+      "count": 297
+    },
+    {
+      "speaker": "mitt-romney",
+      "count": 212
+    },
+    {
+      "speaker": "john-mccain",
+      "count": 189
+    },
+    {
+      "speaker": "scott-walker",
+      "count": 183
+    },
+    {
+      "speaker": "chain-email",
+      "count": 178
+    },
+    {
+      "speaker": "rick-perry",
+      "count": 173
+    },
+    {
+      "speaker": "marco-rubio",
+      "count": 153
+    },
+    {
+      "speaker": "rick-scott",
+      "count": 150
+    }
+  ],
+  "top_subjects": [
+    {
+      "subject": "economy",
+      "count": 1432
+    },
+    {
+      "subject": "health-care",
+      "count": 1426
+    },
+    {
+      "subject": "taxes",
+      "count": 1218
+    },
+    {
+      "subject": "federal-budget",
+      "count": 937
+    },
+    {
+      "subject": "education",
+      "count": 926
+    },
+    {
+      "subject": "jobs",
+      "count": 899
+    },
+    {
+      "subject": "state-budget",
+      "count": 879
+    },
+    {
+      "subject": "candidates-biography",
+      "count": 805
+    },
+    {
+      "subject": "elections",
+      "count": 757
+    },
+    {
+      "subject": "immigration",
+      "count": 642
+    }
+  ],
+  "claim_extraction_handoff": {
+    "available": true,
+    "record_count": 500,
+    "columns": [
+      "raw_claim",
+      "speaker",
+      "label",
+      "subject",
+      "subject_type",
+      "relation",
+      "object",
+      "object_type",
+      "date",
+      "confidence",
+      "entities"
+    ],
+    "label_distribution": {
+      "half-true": 114,
+      "mostly-true": 97,
+      "false": 90,
+      "barely-true": 81,
+      "true": 79,
+      "pants-fire": 39
+    },
+    "top_relations": {
+      "say": 99,
+      "be": 72,
+      "have": 26,
+      "support": 8,
+      "vote": 8,
+      "take": 5,
+      "cut": 5,
+      "go": 5,
+      "on": 4,
+      "have be": 4
+    },
+    "subject_type_distribution": {
+      "UNKNOWN": 211,
+      "PER": 162,
+      "LOC": 53,
+      "MISC": 39,
+      "ORG": 35
+    },
+    "mean_extraction_confidence": 0.7735
+  },
+  "generated_tables": [
+    "report_assets/tables/dataset_split_summary.csv",
+    "report_assets/tables/label_distribution.csv",
+    "report_assets/tables/missing_values.csv",
+    "report_assets/tables/top_speakers.csv",
+    "report_assets/tables/top_parties.csv",
+    "report_assets/tables/top_states.csv",
+    "report_assets/tables/top_contexts.csv",
+    "report_assets/tables/top_subjects.csv"
+  ],
+  "generated_figures": [
+    "report_assets/figures/liar_split_sizes.png",
+    "report_assets/figures/liar_label_distribution.png",
+    "report_assets/figures/liar_party_distribution.png"
+  ]
+}

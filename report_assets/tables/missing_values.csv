@@ -1,0 +1,15 @@
+column,missing_count,missing_percent
+statement_id,0,0.0
+label,0,0.0
+statement,0,0.0
+subjects,2,0.02
+speaker,2,0.02
+speaker_job,3566,27.88
+state,2748,21.48
+party,2,0.02
+barely_true_count,0,0.0
+false_count,0,0.0
+half_true_count,0,0.0
+mostly_true_count,0,0.0
+pants_fire_count,0,0.0
+context,131,1.02
