@@ -1,0 +1,189 @@
+{
+  "metrics": {
+    "liar_total_rows": 12791,
+    "liar_label_count": 6,
+    "claim_extraction_records": 500,
+    "mean_extraction_confidence": 0.7735,
+    "unknown_subject_type_count": 211,
+    "entity_link_coverage_percent": 54.6,
+    "property_mapping_percent": 0.2,
+    "average_linking_confidence": 0.373,
+    "kg_unknown_percent": 99.8,
+    "kg_supported_count": 1,
+    "bayesian_uncertain_percent": 99.8,
+    "bayesian_likely_true_count": 1,
+    "average_decision_confidence": 0.039
+  },
+  "module_evidence": [
+    {
+      "module": "01 Claim Extraction",
+      "method": "RoBERTa NER plus spaCy dependency parsing",
+      "project_evidence": "500 triples; mean extraction confidence 0.7735; 211 UNKNOWN subjects",
+      "responsible_ai_interpretation": "The system creates auditable subject-relation-object evidence, but extraction confidence is not a truth score and parser errors can flow downstream."
+    },
+    {
+      "module": "02 Dataset EDA",
+      "method": "LIAR dataset profiling and preprocessing review",
+      "project_evidence": "12791 rows across 6 truth labels; 26 duplicate statements; 3566 missing speaker jobs",
+      "responsible_ai_interpretation": "The political dataset is useful for benchmarking but carries selection, speaker, topic, and label bias risks."
+    },
+    {
+      "module": "03 Entity Linking and KR",
+      "method": "Wikidata-compatible entity and property representation",
+      "project_evidence": "273 of 500 records have any entity link; property mapping coverage is 0.2%; average linking confidence is 0.373",
+      "responsible_ai_interpretation": "Knowledge representation improves traceability, but low linking and property coverage create a major verification bottleneck."
+    },
+    {
+      "module": "04 KG Reasoning",
+      "method": "Conservative symbolic reasoning over KG evidence",
+      "project_evidence": "499 unknown, 1 supported, 0 contradicted; average KG confidence 0.319",
+      "responsible_ai_interpretation": "The KG layer avoids unsupported factual claims by abstaining when evidence is insufficient."
+    },
+    {
+      "module": "05 Bayesian Inference",
+      "method": "Conservative posterior probability and final verdict model",
+      "project_evidence": "499 uncertain and 1 likely true; average decision confidence 0.039",
+      "responsible_ai_interpretation": "The final model communicates uncertainty instead of converting weak evidence into definitive misinformation labels."
+    }
+  ],
+  "comparison_rows": [
+    {
+      "dimension": "Evidence traceability",
+      "current_pipeline": "High: triples, entity IDs, KG status, evidence text, and Bayesian reasoning are stored.",
+      "llm_only": "Often weak unless explicitly forced to cite sources; generated rationales may sound plausible without evidence.",
+      "rag_hybrid": "Potentially high if retrieved passages, KG IDs, prompts, and model outputs are logged together."
+    },
+    {
+      "dimension": "Coverage",
+      "current_pipeline": "Low-to-moderate: strict entity linking and KG rules leave most claims unknown.",
+      "llm_only": "High surface coverage because an LLM can answer almost every claim.",
+      "rag_hybrid": "Moderate-to-high if retrieval expands evidence while abstention remains allowed."
+    },
+    {
+      "dimension": "Factuality risk",
+      "current_pipeline": "Lower overclaiming risk because the system abstains when KG evidence is missing.",
+      "llm_only": "Higher hallucination and overconfidence risk, especially on political or time-sensitive claims.",
+      "rag_hybrid": "Lower than LLM-only when answers must be grounded in retrieved, checked sources."
+    },
+    {
+      "dimension": "Bias sensitivity",
+      "current_pipeline": "Dataset and speaker-history bias remain, but the Bayesian prior is deliberately weak.",
+      "llm_only": "May reproduce training-data, prompt, political, and source-selection biases with less visibility.",
+      "rag_hybrid": "Can be audited through source diversity checks and topic/speaker fairness reporting."
+    },
+    {
+      "dimension": "Interpretability",
+      "current_pipeline": "Strong: each stage has a specific representation and failure mode.",
+      "llm_only": "Weak-to-moderate: natural-language explanations are readable but not necessarily faithful.",
+      "rag_hybrid": "Strong if the LLM is used to summarise retrieved evidence rather than invent evidence."
+    },
+    {
+      "dimension": "Scalability",
+      "current_pipeline": "Efficient once built, but KG lookup and relation coverage limit throughput and recall.",
+      "llm_only": "Simple to prototype but expensive and harder to reproduce at scale.",
+      "rag_hybrid": "Most realistic deployment path: batch retrieval, cached evidence, and selective LLM calls."
+    },
+    {
+      "dimension": "Best use",
+      "current_pipeline": "Auditable verification, conservative decision support, and reportable uncertainty.",
+      "llm_only": "Exploratory assistance, claim rewriting, and identifying possible evidence sources.",
+      "rag_hybrid": "Human-in-the-loop fact checking with citations, calibrated uncertainty, and escalation."
+    }
+  ],
+  "risk_register": [
+    {
+      "risk_area": "Hallucinated or unsupported evidence",
+      "project_evidence": "KG reasoning returned 99.8% unknown results.",
+      "potential_harm": "A system that still gives definitive answers could falsely accuse or falsely clear claims.",
+      "current_control": "The KG and Bayesian modules abstain when evidence is weak.",
+      "recommended_improvement": "Use RAG with citation verification and require source-level evidence before final labels.",
+      "severity": "High"
+    },
+    {
+      "risk_area": "False positives",
+      "project_evidence": "Bayesian output kept 99.8% of claims uncertain.",
+      "potential_harm": "True or nuanced claims could be labelled misinformation, harming public trust.",
+      "current_control": "Conservative 0.65 threshold and explicit uncertainty class.",
+      "recommended_improvement": "Route low-evidence or high-impact claims to human review.",
+      "severity": "High"
+    },
+    {
+      "risk_area": "False negatives",
+      "project_evidence": "The current KG layer found no contradicted claims in the 500-record handoff.",
+      "potential_harm": "False claims may pass through as uncertain rather than being challenged.",
+      "current_control": "The output does not call uncertain claims true.",
+      "recommended_improvement": "Improve relation extraction, claim decomposition, and live KG/source querying.",
+      "severity": "High"
+    },
+    {
+      "risk_area": "Dataset and speaker bias",
+      "project_evidence": "LIAR has 12791 political claims and concentrated top speakers/topics.",
+      "potential_harm": "The model may encode political, media-selection, or speaker-history bias.",
+      "current_control": "Speaker history is weakly weighted and labels are not used as probability evidence.",
+      "recommended_improvement": "Report performance by speaker, party, topic, state, and label bucket.",
+      "severity": "Medium"
+    },
+    {
+      "risk_area": "Entity-linking error propagation",
+      "project_evidence": "Only 54.6% of records have any entity link and property mapping coverage is 0.2%.",
+      "potential_harm": "Wrong or missing entity IDs can make correct KG reasoning impossible.",
+      "current_control": "Low-confidence links remain visible and usually lead to unknown KG status.",
+      "recommended_improvement": "Add candidate ranking, alias expansion, entity disambiguation, and confidence calibration.",
+      "severity": "Medium"
+    },
+    {
+      "risk_area": "Automation misuse",
+      "project_evidence": "The project produces decision-support probabilities, not verified legal or journalistic rulings.",
+      "potential_harm": "Users may treat probabilistic outputs as authoritative fact-checks.",
+      "current_control": "Outputs include reasoning, uncertainty, and reference-label separation.",
+      "recommended_improvement": "Add UI warnings, audit logs, appeal paths, and reviewer sign-off for public deployment.",
+      "severity": "Medium"
+    }
+  ],
+  "future_work": [
+    {
+      "priority": 1,
+      "improvement": "Replace single-triple extraction with multi-claim decomposition and coreference resolution.",
+      "why_it_matters": "Political claims often contain multiple factual units and pronouns that break simple triples.",
+      "expected_effect": "Higher recall and cleaner downstream KG queries."
+    },
+    {
+      "priority": 2,
+      "improvement": "Expand entity linking with candidate ranking, aliases, and confidence calibration.",
+      "why_it_matters": "Entity-link coverage is the main bottleneck before KG reasoning.",
+      "expected_effect": "More claims reach evidence-based support or contradiction decisions."
+    },
+    {
+      "priority": 3,
+      "improvement": "Add live Wikidata/DBpedia/SPARQL property checks plus trusted web retrieval.",
+      "why_it_matters": "The current KG layer mostly reasons over local descriptions and simple class rules.",
+      "expected_effect": "Better factual coverage while keeping evidence traceable."
+    },
+    {
+      "priority": 4,
+      "improvement": "Use an LLM only inside a retrieval-grounded workflow.",
+      "why_it_matters": "LLMs can improve paraphrase handling and evidence synthesis but must not invent sources.",
+      "expected_effect": "Improved usability without losing auditability."
+    },
+    {
+      "priority": 5,
+      "improvement": "Calibrate Bayesian probabilities against a labelled validation set.",
+      "why_it_matters": "Current probabilities are transparent assumptions rather than empirically calibrated truth rates.",
+      "expected_effect": "More reliable decision thresholds and confidence estimates."
+    },
+    {
+      "priority": 6,
+      "improvement": "Create a human-in-the-loop review workflow for high-impact or low-evidence claims.",
+      "why_it_matters": "Responsible deployment needs accountability for decisions that affect people or public discourse.",
+      "expected_effect": "Lower harm from false positives, false negatives, and automation bias."
+    }
+  ],
+  "artifacts": {
+    "module_evidence_table": "report_assets/tables/responsible_ai_module_evidence.csv",
+    "comparison_table": "report_assets/tables/genai_pipeline_comparison.csv",
+    "risk_register": "report_assets/tables/responsible_ai_risk_register.csv",
+    "future_work_table": "report_assets/tables/responsible_ai_future_work.csv",
+    "summary_json": "06_GenAI_Responsible_AI/responsible_ai_summary.json",
+    "analysis_markdown": "06_GenAI_Responsible_AI/responsible_ai_analysis.md"
+  }
+}

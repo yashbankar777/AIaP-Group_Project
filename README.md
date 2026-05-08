@@ -4,7 +4,7 @@ This repository is structured for Assessment 3: Real World Applications of Artif
 
 The project is a misinformation verification pipeline. It combines NLP-based claim extraction, structural knowledge representation, symbolic knowledge graph reasoning, Bayesian probabilistic inference, and responsible AI/GenAI reflection.
 
-The Streamlit app is treated as a separate group demo and is ignored by Git. The official assignment contribution is based on the AI modules, results, report sections, and individual contribution evidence.
+The official assignment contribution is based on the AI modules, results, report sections, and individual contribution evidence. Legacy root-level Streamlit demo files are ignored by Git, but a tracked assessed demo can be added in a folder such as `streamlit_app/app.py`.
 
 ## Official Folder Structure
 
@@ -19,6 +19,7 @@ shared/                       Shared schemas and sample handoff files
 report_assets/                Tables and figures for the final report
 docs/                         Planning documents and report outline
 LIAR_dataset/                 Source dataset
+streamlit_app/                Optional tracked demo app for final presentation
 ```
 
 New work should go into the numbered folders above. Planning documents are kept in `docs/` so the repository root stays clean.

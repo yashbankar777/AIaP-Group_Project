@@ -1,6 +1,6 @@
 {
-  "input_path": "/Users/shanusharma/AIaP-Group_Project/03_Entity_Linking_KR/linked_entities.json",
-  "output_path": "/Users/shanusharma/AIaP-Group_Project/04_KG_Reasoning/kg_results.json",
+  "input_path": "03_Entity_Linking_KR/linked_entities.json",
+  "output_path": "04_KG_Reasoning/kg_results.json",
   "total_claims": 500,
   "status_counts": {
     "unknown": 499,

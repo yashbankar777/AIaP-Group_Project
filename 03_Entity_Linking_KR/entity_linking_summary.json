@@ -1,6 +1,6 @@
 {
-  "input_path": "/Users/shanusharma/AIaP-Group_Project/01_Claim_Extraction/extracted_triples_filtered.json",
-  "output_path": "/Users/shanusharma/AIaP-Group_Project/03_Entity_Linking_KR/linked_entities.json",
+  "input_path": "01_Claim_Extraction/extracted_triples_filtered.json",
+  "output_path": "03_Entity_Linking_KR/linked_entities.json",
   "total_claims": 500,
   "subjects_linked": 239,
   "objects_linked": 82,

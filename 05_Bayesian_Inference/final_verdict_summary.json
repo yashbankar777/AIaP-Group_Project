@@ -1,0 +1,55 @@
+{
+  "input_path": "04_KG_Reasoning/kg_results.json",
+  "linked_input_path": "03_Entity_Linking_KR/linked_entities.json",
+  "output_path": "05_Bayesian_Inference/final_verdicts.json",
+  "report_table_path": "report_assets/tables/bayesian_verdict_distribution.csv",
+  "total_claims": 500,
+  "verdict_counts": {
+    "uncertain": 499,
+    "likely true": 1
+  },
+  "kg_status_counts": {
+    "unknown": 499,
+    "supported": 1
+  },
+  "average_probability_true": 0.485,
+  "average_decision_confidence": 0.039,
+  "average_evidence_weight": 0.206,
+  "model": {
+    "prior": "neutral 0.50 adjusted only slightly by LIAR speaker-history counts when available",
+    "kg_log_bayes_factors": {
+      "supported": 2.4,
+      "contradicted": -2.4,
+      "unknown": 0.0
+    },
+    "verdict_threshold": 0.65,
+    "speaker_prior_strength": 0.25
+  },
+  "reference_bucket_alignment": {
+    "available_claims": 500,
+    "alignment_rate": 0.392,
+    "note": "Reference labels are used for evaluation only, not to compute final probabilities.",
+    "confusion": [
+      {
+        "reference_bucket": "likely false",
+        "final_verdict": "uncertain",
+        "count": 129
+      },
+      {
+        "reference_bucket": "likely true",
+        "final_verdict": "likely true",
+        "count": 1
+      },
+      {
+        "reference_bucket": "likely true",
+        "final_verdict": "uncertain",
+        "count": 175
+      },
+      {
+        "reference_bucket": "uncertain",
+        "final_verdict": "uncertain",
+        "count": 195
+      }
+    ]
+  }
+}

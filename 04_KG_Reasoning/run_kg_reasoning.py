@@ -295,7 +295,19 @@ def attach_context(result: dict[str, Any], record: dict[str, Any]) -> dict[str, 
     return result
 
 
-def build_summary(results_df: pd.DataFrame, input_path: Path, output_path: Path) -> dict[str, Any]:
+def project_relative_path(path: Path, project_root: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(project_root.resolve()))
+    except ValueError:
+        return str(path)
+
+
+def build_summary(
+    results_df: pd.DataFrame,
+    input_path: Path,
+    output_path: Path,
+    project_root: Path,
+) -> dict[str, Any]:
     status_counts = results_df["kg_status"].value_counts().to_dict()
     rule_counts = (
         results_df["reasoning_rule"]
@@ -305,8 +317,8 @@ def build_summary(results_df: pd.DataFrame, input_path: Path, output_path: Path)
         .to_dict(orient="records")
     )
     return {
-        "input_path": str(input_path),
-        "output_path": str(output_path),
+        "input_path": project_relative_path(input_path, project_root),
+        "output_path": project_relative_path(output_path, project_root),
         "total_claims": int(len(results_df)),
         "status_counts": {key: int(value) for key, value in status_counts.items()},
         "average_kg_confidence": round(float(results_df["kg_confidence"].mean()), 3),
@@ -329,7 +341,7 @@ def run_kg_reasoning(
     results_df = pd.DataFrame(kg_results)
 
     output_path.write_text(json.dumps(kg_results, indent=2, ensure_ascii=False))
-    summary = build_summary(results_df, resolved_input_path, output_path)
+    summary = build_summary(results_df, resolved_input_path, output_path, project_root)
     summary_path.write_text(json.dumps(summary, indent=2))
 
     return {

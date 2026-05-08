@@ -5,10 +5,10 @@ __pycache__/
 .streamlit/
 .DS_Store
 
-# Local/demo app files. The Streamlit app is a group demo, not part of the
-# official assignment contribution structure.
-streamlit_app.py
-inference_engine.py
+# Legacy root-level demo app files. Put the tracked Streamlit app for the
+# assessed demo in a folder such as streamlit_app/app.py.
+/streamlit_app.py
+/inference_engine.py
 
 # Local document-generation helpers and render artifacts.
 scripts/build_group_structure_doc.py

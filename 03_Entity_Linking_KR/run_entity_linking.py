@@ -851,7 +851,19 @@ def load_input_records(project_root: Path, input_path: Path | None) -> tuple[lis
     return json.loads(input_path.read_text()), input_path
 
 
-def build_summary(linked_df: pd.DataFrame, input_path: Path, output_path: Path) -> dict[str, Any]:
+def project_relative_path(path: Path, project_root: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(project_root.resolve()))
+    except ValueError:
+        return str(path)
+
+
+def build_summary(
+    linked_df: pd.DataFrame,
+    input_path: Path,
+    output_path: Path,
+    project_root: Path,
+) -> dict[str, Any]:
     relation_summary = (
         linked_df["relation"]
         .fillna("missing")
@@ -862,8 +874,8 @@ def build_summary(linked_df: pd.DataFrame, input_path: Path, output_path: Path) 
         .to_dict(orient="records")
     )
     return {
-        "input_path": str(input_path),
-        "output_path": str(output_path),
+        "input_path": project_relative_path(input_path, project_root),
+        "output_path": project_relative_path(output_path, project_root),
         "total_claims": int(len(linked_df)),
         "subjects_linked": int(linked_df["subject_kg_id"].notna().sum()),
         "objects_linked": int(linked_df["object_kg_id"].notna().sum()),
@@ -914,7 +926,7 @@ def run_entity_linking(
     linked_df = pd.DataFrame(linked_records)
 
     output_path.write_text(json.dumps(linked_records, indent=2, ensure_ascii=False))
-    summary = build_summary(linked_df, resolved_input_path, output_path)
+    summary = build_summary(linked_df, resolved_input_path, output_path, project_root)
     summary_path.write_text(json.dumps(summary, indent=2))
 
     return {

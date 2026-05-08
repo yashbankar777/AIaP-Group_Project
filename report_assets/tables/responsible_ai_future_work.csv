@@ -1,0 +1,7 @@
+priority,improvement,why_it_matters,expected_effect
+1,Replace single-triple extraction with multi-claim decomposition and coreference resolution.,Political claims often contain multiple factual units and pronouns that break simple triples.,Higher recall and cleaner downstream KG queries.
+2,"Expand entity linking with candidate ranking, aliases, and confidence calibration.",Entity-link coverage is the main bottleneck before KG reasoning.,More claims reach evidence-based support or contradiction decisions.
+3,Add live Wikidata/DBpedia/SPARQL property checks plus trusted web retrieval.,The current KG layer mostly reasons over local descriptions and simple class rules.,Better factual coverage while keeping evidence traceable.
+4,Use an LLM only inside a retrieval-grounded workflow.,LLMs can improve paraphrase handling and evidence synthesis but must not invent sources.,Improved usability without losing auditability.
+5,Calibrate Bayesian probabilities against a labelled validation set.,Current probabilities are transparent assumptions rather than empirically calibrated truth rates.,More reliable decision thresholds and confidence estimates.
+6,Create a human-in-the-loop review workflow for high-impact or low-evidence claims.,Responsible deployment needs accountability for decisions that affect people or public discourse.,"Lower harm from false positives, false negatives, and automation bias."
