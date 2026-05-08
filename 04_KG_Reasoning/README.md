@@ -27,6 +27,7 @@ Fallback input:
 ## Expected Output
 
 - `kg_results.json`
+- `kg_reasoning_summary.json`
 
 Expected fields:
 
@@ -38,6 +39,32 @@ evidence
 reasoning_rule
 source
 ```
+
+Additional context fields such as `raw_claim`, linked subject/object IDs, and
+the original relation are preserved for traceability and downstream Bayesian
+inference.
+
+## How to Run
+
+From the repository root:
+
+```bash
+python3 04_KG_Reasoning/run_kg_reasoning.py
+```
+
+The notebook `kg_reasoning.ipynb` uses the same runner and explains the
+reasoning rules step by step.
+
+## Method Notes
+
+- The module is intentionally conservative. It returns `unknown` unless the
+  linked entities and relation are strong enough for a simple rule.
+- Description-based class rules can support or contradict narrow claims such as
+  `Austin is a city`.
+- Generic relations such as `say`, `be`, and `have` are not treated as factual
+  KG properties without additional structure.
+- Low-confidence entity links are passed through with low-confidence `unknown`
+  reasoning instead of being silently removed.
 
 ## Report Sections Supported
 

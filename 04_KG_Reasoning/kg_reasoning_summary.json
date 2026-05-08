@@ -1,0 +1,20 @@
+{
+  "input_path": "/Users/shanusharma/AIaP-Group_Project/03_Entity_Linking_KR/linked_entities.json",
+  "output_path": "/Users/shanusharma/AIaP-Group_Project/04_KG_Reasoning/kg_results.json",
+  "total_claims": 500,
+  "status_counts": {
+    "unknown": 499,
+    "supported": 1
+  },
+  "average_kg_confidence": 0.319,
+  "reasoning_rule_counts": [
+    {
+      "reasoning_rule": "insufficient_kg_evidence",
+      "count": 499
+    },
+    {
+      "reasoning_rule": "description_class_match_city",
+      "count": 1
+    }
+  ]
+}
