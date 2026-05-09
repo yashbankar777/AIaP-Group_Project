@@ -4,6 +4,7 @@ import argparse
 import json
 import re
 import time
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
@@ -151,6 +152,63 @@ MANUAL_ALIASES = {
     "americans": "Americans",
     "north carolinas": "North Carolina",
     "oregons": "Oregon",
+    # NEW: More common locations
+    "california": "California",
+    "texas": "Texas",
+    "florida": "Florida",
+    "new york": "New York",
+    "chicago": "Chicago",
+    "los angeles": "Los Angeles",
+    "new york city": "New York City",
+    "dc": "Washington, D.C.",
+    "washington dc": "Washington, D.C.",
+    "washington d.c.": "Washington, D.C.",
+    "austin": "Austin",
+    "houston": "Houston",
+    "san francisco": "San Francisco",
+    "dallas": "Dallas",
+    "denver": "Denver",
+    "seattle": "Seattle",
+    "atlanta": "Atlanta",
+    "philadelphia": "Philadelphia",
+    "phoenix": "Phoenix",
+    "las vegas": "Las Vegas",
+    # NEW: Common organizations
+    "naacp": "NAACP",
+    "aclu": "American Civil Liberties Union",
+    "planned parenthood": "Planned Parenthood",
+    "aflcio": "AFL-CIO",
+    "afl-cio": "AFL-CIO",
+    "american civil liberties union": "American Civil Liberties Union",
+    "chamber of commerce": "U.S. Chamber of Commerce",
+    "environmental protection agency": "Environmental Protection Agency",
+    "epa": "Environmental Protection Agency",
+    "fbi": "Federal Bureau of Investigation",
+    "cia": "Central Intelligence Agency",
+    "dhs": "Department of Homeland Security",
+    "homeland security": "Department of Homeland Security",
+    "department of justice": "United States Department of Justice",
+    "doj": "United States Department of Justice",
+    "house": "United States House of Representatives",
+    "senate": "United States Senate",
+    "congress": "United States Congress",
+    # NEW: More politicians
+    "ted cruz": "Ted Cruz",
+    "cruz": "Ted Cruz",
+    "marco rubio": "Marco Rubio",
+    "rubio": "Marco Rubio",
+    "chris christie": "Chris Christie",
+    "christie": "Chris Christie",
+    "jeb bush": "Jeb Bush",
+    "rand paul": "Rand Paul",
+    "john boehner": "John Boehner",
+    "boehner": "John Boehner",
+    "nancy pelosi": "Nancy Pelosi",
+    "pelosi": "Nancy Pelosi",
+    "harry reid": "Harry Reid",
+    "reid": "Harry Reid",
+    "mitch mcconnell": "Mitch McConnell",
+    "mcconnell": "Mitch McConnell",
 }
 
 MANUAL_ENTITIES = {
@@ -277,6 +335,133 @@ MANUAL_ENTITIES = {
         "kg_id": "Q824",
         "label": "Oregon",
         "description": "state of the United States",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    # NEW: Additional common entities
+    "California": {
+        "kg_id": "Q99",
+        "label": "California",
+        "description": "state of the United States",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Texas": {
+        "kg_id": "Q1439",
+        "label": "Texas",
+        "description": "state of the United States",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Florida": {
+        "kg_id": "Q812",
+        "label": "Florida",
+        "description": "state of the United States",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Austin": {
+        "kg_id": "Q5871",
+        "label": "Austin",
+        "description": "capital of Texas",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Chicago": {
+        "kg_id": "Q1297",
+        "label": "Chicago",
+        "description": "city in Illinois",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Los Angeles": {
+        "kg_id": "Q65",
+        "label": "Los Angeles",
+        "description": "city in California",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "New York": {
+        "kg_id": "Q1384",
+        "label": "New York",
+        "description": "state of the United States",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "New York City": {
+        "kg_id": "Q60",
+        "label": "New York City",
+        "description": "city in New York State",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Washington, D.C.": {
+        "kg_id": "Q61",
+        "label": "Washington, D.C.",
+        "description": "capital of the United States",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "NAACP": {
+        "kg_id": "Q364164",
+        "label": "NAACP",
+        "description": "civil rights organization",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "American Civil Liberties Union": {
+        "kg_id": "Q108426",
+        "label": "American Civil Liberties Union",
+        "description": "civil rights organization",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Planned Parenthood": {
+        "kg_id": "Q1142278",
+        "label": "Planned Parenthood",
+        "description": "American non-profit organization",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Environmental Protection Agency": {
+        "kg_id": "Q380344",
+        "label": "Environmental Protection Agency",
+        "description": "agency of the United States government",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Federal Bureau of Investigation": {
+        "kg_id": "Q111019",
+        "label": "Federal Bureau of Investigation",
+        "description": "agency of the United States government",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Ted Cruz": {
+        "kg_id": "Q456158",
+        "label": "Ted Cruz",
+        "description": "American politician",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Marco Rubio": {
+        "kg_id": "Q468583",
+        "label": "Marco Rubio",
+        "description": "American politician and senator",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Nancy Pelosi": {
+        "kg_id": "Q28496",
+        "label": "Nancy Pelosi",
+        "description": "American politician",
+        "source": "manual_alias",
+        "match_score": 0.98,
+    },
+    "Mitch McConnell": {
+        "kg_id": "Q463337",
+        "label": "Mitch McConnell",
+        "description": "American politician and senator",
         "source": "manual_alias",
         "match_score": 0.98,
     },
@@ -466,12 +651,21 @@ def result_score(result: dict[str, Any], query: str, entity_type: str | None) ->
     label_key = normalized_key(label)
     score = 0.5
 
+    # Exact match
     if label_key == query_key:
         score += 0.25
+    # Substring match
     elif query_key and query_key in label_key:
         score += 0.15
     elif label_key and label_key in query_key:
         score += 0.1
+    # NEW: Fuzzy matching for partial similarity (e.g., "Annies List" vs "EMILY's List")
+    else:
+        similarity = SequenceMatcher(None, query_key, label_key).ratio()
+        if similarity > 0.75:
+            score += 0.12
+        elif similarity > 0.65:
+            score += 0.06
 
     if description_is_bad(desc):
         score -= 0.6
@@ -621,7 +815,7 @@ def search_entity(
                 "query": query,
             }
             score = result_score(link, query, entity_type_clean)
-            if score < 0.45:
+            if score < 0.40:  # Lowered from 0.45 to 0.40 for better coverage
                 continue
             link["match_score"] = score
             if best is None or score > best["match_score"]:

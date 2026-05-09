@@ -5,50 +5,76 @@
   "report_table_path": "report_assets/tables/bayesian_verdict_distribution.csv",
   "total_claims": 500,
   "verdict_counts": {
-    "uncertain": 499,
-    "likely true": 1
+    "uncertain": 291,
+    "likely true": 142,
+    "likely false": 67
   },
   "kg_status_counts": {
-    "unknown": 499,
-    "supported": 1
+    "unknown": 358,
+    "supported": 142
   },
-  "average_probability_true": 0.485,
-  "average_decision_confidence": 0.039,
-  "average_evidence_weight": 0.207,
+  "average_probability_true": 0.589,
+  "average_decision_confidence": 0.247,
+  "average_evidence_weight": 0.235,
   "model": {
     "prior": "neutral 0.50 adjusted only slightly by LIAR speaker-history counts when available",
     "kg_log_bayes_factors": {
-      "supported": 2.4,
-      "contradicted": -2.4,
+      "supported": 5.0,
+      "contradicted": -5.0,
       "unknown": 0.0
     },
-    "verdict_threshold": 0.65,
-    "speaker_prior_strength": 0.25
+    "verdict_threshold": 0.55,
+    "speaker_prior_strength": 0.35
   },
   "reference_bucket_alignment": {
     "available_claims": 500,
-    "alignment_rate": 0.392,
+    "alignment_rate": 0.382,
     "note": "Reference labels are used for evaluation only, not to compute final probabilities.",
     "confusion": [
       {
         "reference_bucket": "likely false",
+        "final_verdict": "likely false",
+        "count": 25
+      },
+      {
+        "reference_bucket": "likely false",
+        "final_verdict": "likely true",
+        "count": 46
+      },
+      {
+        "reference_bucket": "likely false",
         "final_verdict": "uncertain",
-        "count": 129
+        "count": 58
+      },
+      {
+        "reference_bucket": "likely true",
+        "final_verdict": "likely false",
+        "count": 13
       },
       {
         "reference_bucket": "likely true",
         "final_verdict": "likely true",
-        "count": 1
+        "count": 48
       },
       {
         "reference_bucket": "likely true",
         "final_verdict": "uncertain",
-        "count": 175
+        "count": 115
+      },
+      {
+        "reference_bucket": "uncertain",
+        "final_verdict": "likely false",
+        "count": 29
+      },
+      {
+        "reference_bucket": "uncertain",
+        "final_verdict": "likely true",
+        "count": 48
       },
       {
         "reference_bucket": "uncertain",
         "final_verdict": "uncertain",
-        "count": 195
+        "count": 118
       }
     ]
   }

@@ -615,14 +615,14 @@
     "property_label": null,
     "object": "Planned Parenthood",
     "object_type": "ORG",
-    "object_kg_id": "Q2553262",
+    "object_kg_id": "Q1142278",
     "object_kg_label": "Planned Parenthood",
-    "object_kg_description": "organization that provides reproductive health services in the United States and internationally",
-    "object_link_source": "prior_output",
+    "object_kg_description": "American non-profit organization",
+    "object_link_source": "manual_alias",
     "date": NaN,
     "extraction_confidence": 0.9995999932,
-    "linking_confidence": 0.783,
-    "linking_notes": "Subject linked via manual_alias using query 'Mitt Romney'. Object linked via prior_output using query 'Planned Parenthood'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.789,
+    "linking_notes": "Subject linked via manual_alias using query 'Mitt Romney'. Object linked via manual_alias using query 'Planned Parenthood'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00026",
@@ -906,10 +906,10 @@
     "speaker": "lee-leffingwell",
     "subject": "Austin",
     "subject_type": "LOC",
-    "subject_kg_id": "Q16559",
+    "subject_kg_id": "Q5871",
     "subject_kg_label": "Austin",
-    "subject_kg_description": "seat of Travis County, and capital of the State of Texas",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "capital of Texas",
+    "subject_link_source": "manual_alias",
     "relation": "be",
     "property_id": null,
     "property_label": null,
@@ -921,8 +921,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.881099999,
-    "linking_confidence": 0.553,
-    "linking_notes": "Subject linked via prior_output using query 'Austin'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.563,
+    "linking_notes": "Subject linked via manual_alias using query 'Austin'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00038",
@@ -956,9 +956,9 @@
     "speaker": "walking-dead",
     "subject": "Atlanta-area",
     "subject_type": "MISC",
-    "subject_kg_id": "Q4816162",
-    "subject_kg_label": "Atlanta Technical College",
-    "subject_kg_description": "Technical college in Atlanta, Georgia, U.S.",
+    "subject_kg_id": "Q4815995",
+    "subject_kg_label": "Atlanta Area Council",
+    "subject_kg_description": "boy Scouts of America local council",
     "subject_link_source": "wikidata_search",
     "relation": "will destruct",
     "property_id": null,
@@ -971,7 +971,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8939999938,
-    "linking_confidence": 0.398,
+    "linking_confidence": 0.419,
     "linking_notes": "Subject linked via wikidata_search using query 'Atlanta-area'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -1031,10 +1031,10 @@
     "speaker": "keep-promise-1-pac",
     "subject": "Marco Rubio",
     "subject_type": "PER",
-    "subject_kg_id": "Q324546",
+    "subject_kg_id": "Q468583",
     "subject_kg_label": "Marco Rubio",
-    "subject_kg_description": "72nd United States Secretary of State since 2025",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "American politician and senator",
+    "subject_link_source": "manual_alias",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -1046,8 +1046,8 @@
     "object_link_source": "manual_alias",
     "date": NaN,
     "extraction_confidence": 0.9975000024,
-    "linking_confidence": 0.69,
-    "linking_notes": "Subject linked via prior_output using query 'Marco Rubio'. Object linked via manual_alias using query 'Islamic State'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.788,
+    "linking_notes": "Subject linked via manual_alias using query 'Marco Rubio'. Object linked via manual_alias using query 'Islamic State'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00043",
@@ -1146,7 +1146,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.899600029,
-    "linking_confidence": 0.4,
+    "linking_confidence": 0.442,
     "linking_notes": "Subject linked via wikidata_search using query 'African-American'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -1583,8 +1583,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "be",
     "property_id": null,
     "property_label": null,
@@ -1596,8 +1596,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8999000192,
-    "linking_confidence": 0.557,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00065",
@@ -1833,7 +1833,7 @@
     "subject_type": "MISC",
     "subject_kg_id": "Q362",
     "subject_kg_label": "World War II",
-    "subject_kg_description": "1939–1945 global conflict",
+    "subject_kg_description": "1939\u20131945 global conflict",
     "subject_link_source": "prior_output",
     "relation": "time",
     "property_id": null,
@@ -2171,7 +2171,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.345,
+    "linking_confidence": 0.387,
     "linking_notes": "Subject linked via prior_output using query 'bob-goodlatte'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -2231,10 +2231,10 @@
     "speaker": "jim-skaggs",
     "subject": "Austin",
     "subject_type": "LOC",
-    "subject_kg_id": "Q16559",
+    "subject_kg_id": "Q5871",
     "subject_kg_label": "Austin",
-    "subject_kg_description": "seat of Travis County, and capital of the State of Texas",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "capital of Texas",
+    "subject_link_source": "manual_alias",
     "relation": "is burden",
     "property_id": null,
     "property_label": null,
@@ -2246,8 +2246,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8852999806,
-    "linking_confidence": 0.554,
-    "linking_notes": "Subject linked via prior_output using query 'Austin'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.564,
+    "linking_notes": "Subject linked via manual_alias using query 'Austin'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00091",
@@ -2417,7 +2417,7 @@
     "object_type": "MISC",
     "object_kg_id": "Q8698",
     "object_kg_label": "Great Depression",
-    "object_kg_description": "worldwide economic depression (1929–1939)",
+    "object_kg_description": "worldwide economic depression (1929\u20131939)",
     "object_link_source": "prior_output",
     "date": NaN,
     "extraction_confidence": 0.8988000154,
@@ -2892,12 +2892,12 @@
     "object_type": "LOC",
     "object_kg_id": "Q1384",
     "object_kg_label": "New York",
-    "object_kg_description": "state of the United States of America",
-    "object_link_source": "prior_output",
+    "object_kg_description": "state of the United States",
+    "object_link_source": "manual_alias",
     "date": NaN,
     "extraction_confidence": 0.9998000264,
-    "linking_confidence": 0.783,
-    "linking_notes": "Subject linked via manual_alias using query 'Barack Obama'. Object linked via prior_output using query 'New York'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.789,
+    "linking_notes": "Subject linked via manual_alias using query 'Barack Obama'. Object linked via manual_alias using query 'New York'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00117",
@@ -3058,8 +3058,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -3071,8 +3071,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8999000192,
-    "linking_confidence": 0.557,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00124",
@@ -3771,7 +3771,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.345,
+    "linking_confidence": 0.387,
     "linking_notes": "Subject linked via prior_output using query 'mitt-romney'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -4521,7 +4521,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.345,
+    "linking_confidence": 0.387,
     "linking_notes": "Subject linked via prior_output using query 'robert-jacquard'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -4592,12 +4592,12 @@
     "object_type": "LOC",
     "object_kg_id": "Q812",
     "object_kg_label": "Florida",
-    "object_kg_description": "state of the United States of America",
-    "object_link_source": "prior_output",
+    "object_kg_description": "state of the United States",
+    "object_link_source": "manual_alias",
     "date": NaN,
     "extraction_confidence": 0.8999000192,
-    "linking_confidence": 0.415,
-    "linking_notes": "Subject not linked or not suitable for linking. Object linked via prior_output using query 'Florida'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.421,
+    "linking_notes": "Subject not linked or not suitable for linking. Object linked via manual_alias using query 'Florida'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00185",
@@ -4608,8 +4608,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "be",
     "property_id": null,
     "property_label": null,
@@ -4621,8 +4621,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.899699986,
-    "linking_confidence": 0.557,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00186",
@@ -4821,7 +4821,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.899699986,
-    "linking_confidence": 0.47,
+    "linking_confidence": 0.491,
     "linking_notes": "Subject linked via prior_output using query 'Gabrielle Giffords'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -4881,10 +4881,10 @@
     "speaker": "hillary-clinton",
     "subject": "Marco Rubio",
     "subject_type": "PER",
-    "subject_kg_id": "Q324546",
+    "subject_kg_id": "Q468583",
     "subject_kg_label": "Marco Rubio",
-    "subject_kg_description": "72nd United States Secretary of State since 2025",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "American politician and senator",
+    "subject_link_source": "manual_alias",
     "relation": "vote",
     "property_id": null,
     "property_label": null,
@@ -4896,8 +4896,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.896600008,
-    "linking_confidence": 0.469,
-    "linking_notes": "Subject linked via prior_output using query 'Marco Rubio'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.567,
+    "linking_notes": "Subject linked via manual_alias using query 'Marco Rubio'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00197",
@@ -5271,7 +5271,7 @@
     "object_link_source": "prior_output",
     "date": "1985",
     "extraction_confidence": 0.9998000264,
-    "linking_confidence": 0.645,
+    "linking_confidence": 0.687,
     "linking_notes": "Subject linked via prior_output using query 'Tom Kean'. Object linked via prior_output using query 'Jersey'. No reliable Wikidata property mapping for relation."
   },
   {
@@ -5658,7 +5658,7 @@
     "subject_type": "PER",
     "subject_kg_id": "Q6279",
     "subject_kg_label": "Joe Biden",
-    "subject_kg_description": "46th President of the United States (2021–2025)",
+    "subject_kg_description": "46th President of the United States (2021\u20132025)",
     "subject_link_source": "prior_output",
     "relation": "vote",
     "property_id": null,
@@ -5667,7 +5667,7 @@
     "object_type": "MISC",
     "object_kg_id": "Q37643",
     "object_kg_label": "Gulf War",
-    "object_kg_description": "1990–1991 conflict between Iraq and a 42-country coalition",
+    "object_kg_description": "1990\u20131991 conflict between Iraq and a 42-country coalition",
     "object_link_source": "prior_output",
     "date": NaN,
     "extraction_confidence": 0.9998000264,
@@ -5881,10 +5881,10 @@
     "speaker": "rand-paul",
     "subject": "Marco Rubio",
     "subject_type": "PER",
-    "subject_kg_id": "Q324546",
+    "subject_kg_id": "Q468583",
     "subject_kg_label": "Marco Rubio",
-    "subject_kg_description": "72nd United States Secretary of State since 2025",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "American politician and senator",
+    "subject_link_source": "manual_alias",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -5896,8 +5896,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.899699986,
-    "linking_confidence": 0.47,
-    "linking_notes": "Subject linked via prior_output using query 'Marco Rubio'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Marco Rubio'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00237",
@@ -6017,7 +6017,7 @@
     "object_type": "MISC",
     "object_kg_id": "Q189266",
     "object_kg_label": "Eastern Front",
-    "object_kg_description": "1941–1945 World War II theater",
+    "object_kg_description": "1941\u20131945 World War II theater",
     "object_link_source": "prior_output",
     "date": NaN,
     "extraction_confidence": 0.9986000061,
@@ -6033,8 +6033,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -6042,12 +6042,12 @@
     "object_type": "LOC",
     "object_kg_id": "Q1439",
     "object_kg_label": "Texas",
-    "object_kg_description": "state of the United States of America",
-    "object_link_source": "prior_output",
+    "object_kg_description": "state of the United States",
+    "object_link_source": "manual_alias",
     "date": NaN,
     "extraction_confidence": 0.9959999919,
-    "linking_confidence": 0.771,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object linked via prior_output using query 'Texas'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.788,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object linked via manual_alias using query 'Texas'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00243",
@@ -6096,7 +6096,7 @@
     "object_link_source": null,
     "date": "2012",
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.345,
+    "linking_confidence": 0.387,
     "linking_notes": "Subject linked via prior_output using query 'jeff-merkley'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -6381,10 +6381,10 @@
     "speaker": "paul-sarlo",
     "subject": "Chris Christies",
     "subject_type": "PER",
-    "subject_kg_id": null,
-    "subject_kg_label": null,
-    "subject_kg_description": null,
-    "subject_link_source": null,
+    "subject_kg_id": "Q20629886",
+    "subject_kg_label": "Chris Christie presidential campaign, 2016",
+    "subject_kg_description": "presidential campaign of Chris Christie",
+    "subject_link_source": "wikidata_search",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -6396,8 +6396,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8999000192,
-    "linking_confidence": 0.225,
-    "linking_notes": "Subject not linked or not suitable for linking. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.522,
+    "linking_notes": "Subject linked via wikidata_search using query 'Chris Christie'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00257",
@@ -6684,7 +6684,7 @@
     "subject_kg_id": "Q1974620",
     "subject_kg_label": "Clinton Foundation",
     "subject_kg_description": "non-profit organization in the USA",
-    "subject_link_source": "wikidata_search",
+    "subject_link_source": "prior_output",
     "relation": "hypocrisy",
     "property_id": null,
     "property_label": null,
@@ -6693,11 +6693,11 @@
     "object_kg_id": "Q1974620",
     "object_kg_label": "Clinton Foundation",
     "object_kg_description": "non-profit organization in the USA",
-    "object_link_source": "wikidata_search",
+    "object_link_source": "prior_output",
     "date": "2010",
     "extraction_confidence": 0.9984999895,
     "linking_confidence": 0.772,
-    "linking_notes": "Subject linked via wikidata_search using query 'Clinton Foundation'. Object linked via wikidata_search using query 'Clinton Foundation'. No reliable Wikidata property mapping for relation."
+    "linking_notes": "Subject linked via prior_output using query 'Clinton Foundation'. Object linked via prior_output using query 'Clinton Foundation'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00269",
@@ -6731,10 +6731,10 @@
     "speaker": "rudy-giuliani",
     "subject": "Miranda",
     "subject_type": "PER",
-    "subject_kg_id": null,
-    "subject_kg_label": null,
-    "subject_kg_description": null,
-    "subject_link_source": null,
+    "subject_kg_id": "Q780803",
+    "subject_kg_label": "Miranda",
+    "subject_kg_description": "programming language",
+    "subject_link_source": "wikidata_search",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -6746,8 +6746,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8907999992,
-    "linking_confidence": 0.223,
-    "linking_notes": "Subject not linked or not suitable for linking. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.433,
+    "linking_notes": "Subject linked via wikidata_search using query 'Miranda'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00271",
@@ -6756,10 +6756,10 @@
     "speaker": "lou-dobbs",
     "subject": "lou-dobbs",
     "subject_type": "PER",
-    "subject_kg_id": null,
-    "subject_kg_label": null,
-    "subject_kg_description": null,
-    "subject_link_source": null,
+    "subject_kg_id": "Q1287852",
+    "subject_kg_label": "Lou Dobbs",
+    "subject_kg_description": "American conservative political commentator (1945\u20132024)",
+    "subject_link_source": "wikidata_search",
     "relation": "on",
     "property_id": null,
     "property_label": null,
@@ -6771,8 +6771,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.1,
-    "linking_notes": "Subject not linked or not suitable for linking. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.264,
+    "linking_notes": "Subject linked via wikidata_search using query 'lou-dobbs'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00272",
@@ -6981,10 +6981,10 @@
     "speaker": "rick-scott",
     "subject": "rick-scott",
     "subject_type": "PER",
-    "subject_kg_id": null,
-    "subject_kg_label": null,
-    "subject_kg_description": null,
-    "subject_link_source": null,
+    "subject_kg_id": "Q439729",
+    "subject_kg_label": "Rick Scott",
+    "subject_kg_description": "United States Senator from Florida since 2019",
+    "subject_link_source": "wikidata_search",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -6996,8 +6996,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.1,
-    "linking_notes": "Subject not linked or not suitable for linking. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.299,
+    "linking_notes": "Subject linked via wikidata_search using query 'rick-scott'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00281",
@@ -7296,7 +7296,7 @@
     "object_link_source": "wikidata_search",
     "date": NaN,
     "extraction_confidence": 0.9997000098,
-    "linking_confidence": 0.525,
+    "linking_confidence": 0.591,
     "linking_notes": "Subject linked via wikidata_search using query 'African-American'. Object linked via wikidata_search using query 'African-American'. No reliable Wikidata property mapping for relation."
   },
   {
@@ -7317,12 +7317,12 @@
     "object_type": "LOC",
     "object_kg_id": "Q1439",
     "object_kg_label": "Texas",
-    "object_kg_description": "state of the United States of America",
-    "object_link_source": "prior_output",
+    "object_kg_description": "state of the United States",
+    "object_link_source": "manual_alias",
     "date": "2007",
     "extraction_confidence": 0.8999000192,
-    "linking_confidence": 0.415,
-    "linking_notes": "Subject not linked or not suitable for linking. Object linked via prior_output using query 'Texas'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.421,
+    "linking_notes": "Subject not linked or not suitable for linking. Object linked via manual_alias using query 'Texas'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00294",
@@ -8808,8 +8808,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "create",
     "property_id": null,
     "property_label": null,
@@ -8821,8 +8821,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8998000026,
-    "linking_confidence": 0.557,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00354",
@@ -8981,10 +8981,10 @@
     "speaker": "bill-foster",
     "subject": "Foster",
     "subject_type": "PER",
-    "subject_kg_id": "Q28469438",
-    "subject_kg_label": "Foster",
-    "subject_kg_description": "village in Lac-Brome, Quebec, Canada, former municipality",
-    "subject_link_source": "wikidata_search",
+    "subject_kg_id": null,
+    "subject_kg_label": null,
+    "subject_kg_description": null,
+    "subject_link_source": null,
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -8996,8 +8996,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8993999958,
-    "linking_confidence": 0.435,
-    "linking_notes": "Subject linked via wikidata_search using query 'Foster'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.225,
+    "linking_notes": "Subject not linked or not suitable for linking. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00361",
@@ -9008,8 +9008,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -9021,8 +9021,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8998000026,
-    "linking_confidence": 0.557,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00362",
@@ -9108,8 +9108,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -9121,8 +9121,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8999000192,
-    "linking_confidence": 0.557,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00366",
@@ -9246,7 +9246,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.345,
+    "linking_confidence": 0.387,
     "linking_notes": "Subject linked via prior_output using query 'rick-santorum'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -9383,7 +9383,7 @@
     "subject_type": "PER",
     "subject_kg_id": "Q461734",
     "subject_kg_label": "Sheila Jackson Lee",
-    "subject_kg_description": "American lawyer and politician (1950–2024)",
+    "subject_kg_description": "American lawyer and politician (1950\u20132024)",
     "subject_link_source": "prior_output",
     "relation": "say",
     "property_id": null,
@@ -9583,8 +9583,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q812",
     "subject_kg_label": "Florida",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "are pay",
     "property_id": null,
     "property_label": null,
@@ -9596,8 +9596,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.899699986,
-    "linking_confidence": 0.707,
-    "linking_notes": "Subject linked via prior_output using query 'Florida'. Object treated as literal value. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.718,
+    "linking_notes": "Subject linked via manual_alias using query 'Florida'. Object treated as literal value. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00385",
@@ -9608,8 +9608,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "has go",
     "property_id": null,
     "property_label": null,
@@ -9621,8 +9621,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8999000192,
-    "linking_confidence": 0.557,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00386",
@@ -9733,7 +9733,7 @@
     "subject_type": "PER",
     "subject_kg_id": "Q529090",
     "subject_kg_label": "Bill Pascrell",
-    "subject_kg_description": "American politician (1937–2024)",
+    "subject_kg_description": "American politician (1937\u20132024)",
     "subject_link_source": "prior_output",
     "relation": "say",
     "property_id": null,
@@ -9806,10 +9806,10 @@
     "speaker": "mark-warner",
     "subject": "mark-warner",
     "subject_type": "PER",
-    "subject_kg_id": "Q453893",
-    "subject_kg_label": "Mark Warner",
-    "subject_kg_description": "United States Senator from Virginia",
-    "subject_link_source": "wikidata_search",
+    "subject_kg_id": null,
+    "subject_kg_label": null,
+    "subject_kg_description": null,
+    "subject_link_source": null,
     "relation": "on",
     "property_id": null,
     "property_label": null,
@@ -9821,8 +9821,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.258,
-    "linking_notes": "Subject linked via wikidata_search using query 'mark-warner'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.1,
+    "linking_notes": "Subject not linked or not suitable for linking. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00394",
@@ -9946,7 +9946,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.258,
+    "linking_confidence": 0.299,
     "linking_notes": "Subject linked via wikidata_search using query 'ted-wheeler'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -10383,8 +10383,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -10396,8 +10396,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.8999000192,
-    "linking_confidence": 0.557,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.568,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00417",
@@ -10446,7 +10446,7 @@
     "object_link_source": "prior_output",
     "date": NaN,
     "extraction_confidence": 0.8981999755,
-    "linking_confidence": 0.365,
+    "linking_confidence": 0.389,
     "linking_notes": "Subject not linked or not suitable for linking. Object linked via prior_output using query 'al-Qaida'. No reliable Wikidata property mapping for relation."
   },
   {
@@ -10531,10 +10531,10 @@
     "speaker": "arianna-huffington",
     "subject": "arianna-huffington",
     "subject_type": "PER",
-    "subject_kg_id": null,
-    "subject_kg_label": null,
-    "subject_kg_description": null,
-    "subject_link_source": null,
+    "subject_kg_id": "Q233397",
+    "subject_kg_label": "Arianna Huffington",
+    "subject_kg_description": "Greek and American businesswoman (born 1950)",
+    "subject_link_source": "wikidata_search",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -10546,8 +10546,8 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.1,
-    "linking_notes": "Subject not linked or not suitable for linking. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.264,
+    "linking_notes": "Subject linked via wikidata_search using query 'arianna-huffington'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00423",
@@ -10733,8 +10733,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -10742,12 +10742,12 @@
     "object_type": "LOC",
     "object_kg_id": "Q1439",
     "object_kg_label": "Texas",
-    "object_kg_description": "state of the United States of America",
-    "object_link_source": "prior_output",
+    "object_kg_description": "state of the United States",
+    "object_link_source": "manual_alias",
     "date": NaN,
     "extraction_confidence": 0.9998999834,
-    "linking_confidence": 0.772,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object linked via prior_output using query 'Texas'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.789,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object linked via manual_alias using query 'Texas'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00431",
@@ -10821,7 +10821,7 @@
     "object_link_source": null,
     "date": "2012",
     "extraction_confidence": 0.4,
-    "linking_confidence": 0.345,
+    "linking_confidence": 0.387,
     "linking_notes": "Subject linked via prior_output using query 'michael-burgess'. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -10856,10 +10856,10 @@
     "speaker": "republican-governors-association",
     "subject": "Jason Carter",
     "subject_type": "PER",
-    "subject_kg_id": null,
-    "subject_kg_label": null,
-    "subject_kg_description": null,
-    "subject_link_source": null,
+    "subject_kg_id": "Q6162170",
+    "subject_kg_label": "Jason Carter",
+    "subject_kg_description": "American politician (born 1975)",
+    "subject_link_source": "wikidata_search",
     "relation": "support",
     "property_id": null,
     "property_label": null,
@@ -10871,8 +10871,8 @@
     "object_link_source": "manual_alias",
     "date": NaN,
     "extraction_confidence": 0.9990000129,
-    "linking_confidence": 0.446,
-    "linking_notes": "Subject not linked or not suitable for linking. Object linked via manual_alias using query 'Patient Protection and Affordable Care Act'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.778,
+    "linking_notes": "Subject linked via wikidata_search using query 'Jason Carter'. Object linked via manual_alias using query 'Patient Protection and Affordable Care Act'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00436",
@@ -11042,12 +11042,12 @@
     "object_type": "LOC",
     "object_kg_id": "Q1439",
     "object_kg_label": "Texas",
-    "object_kg_description": "state of the United States of America",
-    "object_link_source": "prior_output",
+    "object_kg_description": "state of the United States",
+    "object_link_source": "manual_alias",
     "date": NaN,
     "extraction_confidence": 0.9973999858,
-    "linking_confidence": 0.439,
-    "linking_notes": "Subject not linked or not suitable for linking. Object linked via prior_output using query 'Texas'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.445,
+    "linking_notes": "Subject not linked or not suitable for linking. Object linked via manual_alias using query 'Texas'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00443",
@@ -11083,7 +11083,7 @@
     "subject_type": "PER",
     "subject_kg_id": "Q1240224",
     "subject_kg_label": "Donald Payne Jr.",
-    "subject_kg_description": "American politician (1958–2024)",
+    "subject_kg_description": "American politician (1958\u20132024)",
     "subject_link_source": "prior_output",
     "relation": "say",
     "property_id": null,
@@ -11831,10 +11831,10 @@
     "speaker": "victoria-taft",
     "subject": "Allah",
     "subject_type": "PER",
-    "subject_kg_id": null,
-    "subject_kg_label": null,
-    "subject_kg_description": null,
-    "subject_link_source": null,
+    "subject_kg_id": "Q234801",
+    "subject_kg_label": "Allah",
+    "subject_kg_description": "Arabic word for God",
+    "subject_link_source": "wikidata_search",
     "relation": "say",
     "property_id": null,
     "property_label": null,
@@ -11846,7 +11846,7 @@
     "object_link_source": null,
     "date": NaN,
     "extraction_confidence": 0.9959999919,
-    "linking_confidence": 0.249,
+    "linking_confidence": 0.592,
     "linking_notes": "Subject not linked or not suitable for linking. Object not linked or not suitable for linking. No reliable Wikidata property mapping for relation."
   },
   {
@@ -11858,8 +11858,8 @@
     "subject_type": "LOC",
     "subject_kg_id": "Q1439",
     "subject_kg_label": "Texas",
-    "subject_kg_description": "state of the United States of America",
-    "subject_link_source": "prior_output",
+    "subject_kg_description": "state of the United States",
+    "subject_link_source": "manual_alias",
     "relation": "believe",
     "property_id": null,
     "property_label": null,
@@ -11871,8 +11871,8 @@
     "object_link_source": "prior_output",
     "date": NaN,
     "extraction_confidence": 0.9111999869,
-    "linking_confidence": 0.69,
-    "linking_notes": "Subject linked via prior_output using query 'Texas'. Object linked via prior_output using query 'V.A.'. No reliable Wikidata property mapping for relation."
+    "linking_confidence": 0.701,
+    "linking_notes": "Subject linked via manual_alias using query 'Texas'. Object linked via prior_output using query 'V.A.'. No reliable Wikidata property mapping for relation."
   },
   {
     "claim_id": "claim-00476",

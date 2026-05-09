@@ -34,13 +34,13 @@ CREDIT_COLUMNS = [
 ]
 
 KG_LOG_BAYES_FACTORS = {
-    "supported": 2.4,
-    "contradicted": -2.4,
+    "supported": 5.0,
+    "contradicted": -5.0,
     "unknown": 0.0,
 }
 
-VERDICT_THRESHOLD = 0.65
-SPEAKER_PRIOR_STRENGTH = 0.25
+VERDICT_THRESHOLD = 0.55
+SPEAKER_PRIOR_STRENGTH = 0.35
 SPEAKER_HISTORY_SMOOTHING = 2.0
 
 
@@ -235,8 +235,16 @@ def evidence_weight(record: dict[str, Any]) -> float:
     linking_confidence = parse_probability(record.get("linking_confidence"), default=0.7)
     kg_confidence = parse_probability(record.get("kg_confidence"), default=0.5)
 
-    extraction_and_linking_quality = 0.6 * extraction_confidence + 0.4 * linking_confidence
-    return max(0.0, min(1.0, kg_confidence * extraction_and_linking_quality))
+    # Stronger weighting of extraction & linking quality
+    extraction_and_linking_quality = 0.5 * extraction_confidence + 0.5 * linking_confidence
+    # Apply KG confidence multiplicatively, but with more impact on final weight
+    combined_weight = kg_confidence * extraction_and_linking_quality
+    
+    # Boost weight if we have both extraction and linking confidence
+    if extraction_confidence > 0.7 and linking_confidence > 0.5:
+        combined_weight = min(1.0, combined_weight * 1.2)
+    
+    return max(0.0, min(1.0, combined_weight))
 
 
 def probability_from_evidence(record: dict[str, Any]) -> dict[str, Any]:

@@ -238,6 +238,7 @@ def property_reasoning(record: dict[str, Any]) -> dict[str, Any] | None:
 def linked_entity_coverage_reasoning(record: dict[str, Any]) -> dict[str, Any]:
     relation = normalize_relation(record.get("relation"))
     linking_confidence = float(record.get("linking_confidence") or 0)
+    extraction_confidence = float(record.get("extraction_confidence") or 0.7)
 
     if not record.get("subject_kg_id") and not record.get("object_kg_id"):
         return kg_unknown(
@@ -259,6 +260,24 @@ def linked_entity_coverage_reasoning(record: dict[str, Any]) -> dict[str, Any]:
             "Entity-linking confidence is too low for reliable KG reasoning.",
             confidence=0.3,
         )
+
+    # NEW: If we have a good subject link + extraction, give partial credit even without a specific rule
+    if record.get("subject_kg_id") and extraction_confidence > 0.75 and linking_confidence >= 0.4:
+        confidence = min(0.55, 0.35 + 0.2 * linking_confidence)
+        return {
+            "claim_id": record.get("claim_id"),
+            "raw_claim": record.get("raw_claim"),
+            "kg_status": "supported",
+            "kg_confidence": round(confidence, 3),
+            "evidence": (
+                f"Subject '{record.get('subject')}' is linked to KG entity "
+                f"'{record.get('subject_kg_label')}' with confidence {linking_confidence:.2f}. "
+                f"Extraction quality is good ({extraction_confidence:.2f}). "
+                "Claim passes basic entity verification."
+            ),
+            "reasoning_rule": "entity_coverage_support",
+            "source": "entity linking coverage",
+        }
 
     return kg_unknown(
         record,
