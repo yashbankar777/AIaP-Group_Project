@@ -5,9 +5,9 @@
     "claim_extraction_records": 500,
     "mean_extraction_confidence": 0.7735,
     "unknown_subject_type_count": 211,
-    "entity_link_coverage_percent": 54.6,
+    "entity_link_coverage_percent": 54.8,
     "property_mapping_percent": 0.2,
-    "average_linking_confidence": 0.373,
+    "average_linking_confidence": 0.374,
     "kg_unknown_percent": 99.8,
     "kg_supported_count": 1,
     "bayesian_uncertain_percent": 99.8,
@@ -30,13 +30,13 @@
     {
       "module": "03 Entity Linking and KR",
       "method": "Wikidata-compatible entity and property representation",
-      "project_evidence": "273 of 500 records have any entity link; property mapping coverage is 0.2%; average linking confidence is 0.373",
+      "project_evidence": "274 of 500 records have any entity link; property mapping coverage is 0.2%; average linking confidence is 0.374",
       "responsible_ai_interpretation": "Knowledge representation improves traceability, but low linking and property coverage create a major verification bottleneck."
     },
     {
       "module": "04 KG Reasoning",
       "method": "Conservative symbolic reasoning over KG evidence",
-      "project_evidence": "499 unknown, 1 supported, 0 contradicted; average KG confidence 0.319",
+      "project_evidence": "499 unknown, 1 supported, 0 contradicted; average KG confidence 0.32",
       "responsible_ai_interpretation": "The KG layer avoids unsupported factual claims by abstaining when evidence is insufficient."
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "risk_area": "Entity-linking error propagation",
-      "project_evidence": "Only 54.6% of records have any entity link and property mapping coverage is 0.2%.",
+      "project_evidence": "Only 54.8% of records have any entity link and property mapping coverage is 0.2%.",
       "potential_harm": "Wrong or missing entity IDs can make correct KG reasoning impossible.",
       "current_control": "Low-confidence links remain visible and usually lead to unknown KG status.",
       "recommended_improvement": "Add candidate ranking, alias expansion, entity disambiguation, and confidence calibration.",

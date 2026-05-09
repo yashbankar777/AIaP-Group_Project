@@ -14,7 +14,7 @@
   },
   "average_probability_true": 0.485,
   "average_decision_confidence": 0.039,
-  "average_evidence_weight": 0.206,
+  "average_evidence_weight": 0.207,
   "model": {
     "prior": "neutral 0.50 adjusted only slightly by LIAR speaker-history counts when available",
     "kg_log_bayes_factors": {

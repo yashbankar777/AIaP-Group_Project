@@ -6,7 +6,7 @@
     "unknown": 499,
     "supported": 1
   },
-  "average_kg_confidence": 0.319,
+  "average_kg_confidence": 0.32,
   "reasoning_rule_counts": [
     {
       "reasoning_rule": "insufficient_kg_evidence",

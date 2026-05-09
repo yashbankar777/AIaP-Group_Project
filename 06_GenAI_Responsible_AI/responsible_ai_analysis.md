@@ -14,8 +14,8 @@ For a high-stakes misinformation setting, this conservative behaviour is ethical
 | --- | --- | --- | --- |
 | 01 Claim Extraction | RoBERTa NER plus spaCy dependency parsing | 500 triples; mean extraction confidence 0.7735; 211 UNKNOWN subjects | The system creates auditable subject-relation-object evidence, but extraction confidence is not a truth score and parser errors can flow downstream. |
 | 02 Dataset EDA | LIAR dataset profiling and preprocessing review | 12791 rows across 6 truth labels; 26 duplicate statements; 3566 missing speaker jobs | The political dataset is useful for benchmarking but carries selection, speaker, topic, and label bias risks. |
-| 03 Entity Linking and KR | Wikidata-compatible entity and property representation | 273 of 500 records have any entity link; property mapping coverage is 0.2%; average linking confidence is 0.373 | Knowledge representation improves traceability, but low linking and property coverage create a major verification bottleneck. |
-| 04 KG Reasoning | Conservative symbolic reasoning over KG evidence | 499 unknown, 1 supported, 0 contradicted; average KG confidence 0.319 | The KG layer avoids unsupported factual claims by abstaining when evidence is insufficient. |
+| 03 Entity Linking and KR | Wikidata-compatible entity and property representation | 274 of 500 records have any entity link; property mapping coverage is 0.2%; average linking confidence is 0.374 | Knowledge representation improves traceability, but low linking and property coverage create a major verification bottleneck. |
+| 04 KG Reasoning | Conservative symbolic reasoning over KG evidence | 499 unknown, 1 supported, 0 contradicted; average KG confidence 0.32 | The KG layer avoids unsupported factual claims by abstaining when evidence is insufficient. |
 | 05 Bayesian Inference | Conservative posterior probability and final verdict model | 499 uncertain and 1 likely true; average decision confidence 0.039 | The final model communicates uncertainty instead of converting weak evidence into definitive misinformation labels. |
 
 ## GenAI and LLM Comparison
@@ -38,13 +38,13 @@ For a high-stakes misinformation setting, this conservative behaviour is ethical
 | False positives | Bayesian output kept 99.8% of claims uncertain. | True or nuanced claims could be labelled misinformation, harming public trust. | Conservative 0.65 threshold and explicit uncertainty class. | Route low-evidence or high-impact claims to human review. | High |
 | False negatives | The current KG layer found no contradicted claims in the 500-record handoff. | False claims may pass through as uncertain rather than being challenged. | The output does not call uncertain claims true. | Improve relation extraction, claim decomposition, and live KG/source querying. | High |
 | Dataset and speaker bias | LIAR has 12791 political claims and concentrated top speakers/topics. | The model may encode political, media-selection, or speaker-history bias. | Speaker history is weakly weighted and labels are not used as probability evidence. | Report performance by speaker, party, topic, state, and label bucket. | Medium |
-| Entity-linking error propagation | Only 54.6% of records have any entity link and property mapping coverage is 0.2%. | Wrong or missing entity IDs can make correct KG reasoning impossible. | Low-confidence links remain visible and usually lead to unknown KG status. | Add candidate ranking, alias expansion, entity disambiguation, and confidence calibration. | Medium |
+| Entity-linking error propagation | Only 54.8% of records have any entity link and property mapping coverage is 0.2%. | Wrong or missing entity IDs can make correct KG reasoning impossible. | Low-confidence links remain visible and usually lead to unknown KG status. | Add candidate ranking, alias expansion, entity disambiguation, and confidence calibration. | Medium |
 | Automation misuse | The project produces decision-support probabilities, not verified legal or journalistic rulings. | Users may treat probabilistic outputs as authoritative fact-checks. | Outputs include reasoning, uncertainty, and reference-label separation. | Add UI warnings, audit logs, appeal paths, and reviewer sign-off for public deployment. | Medium |
 
 ## Scalability and Deployment Reflection
 
 - Claim extraction can be batched, but higher-quality relation extraction and coreference resolution are needed before scaling beyond the current 500-record handoff.
-- Entity linking is the main coverage bottleneck: only 54.6% of records have any entity link, and property mapping coverage is 0.2%.
+- Entity linking is the main coverage bottleneck: only 54.8% of records have any entity link, and property mapping coverage is 0.2%.
 - KG reasoning is computationally cheap once entities and properties are available, but external API calls, incomplete KG coverage, and political claim complexity limit recall.
 - Bayesian inference is scalable and transparent, but its probabilities should be calibrated with validation data before deployment.
 - LLM-only verification scales poorly in governance terms because cost, prompt sensitivity, hallucination risk, and reproducibility problems increase with volume.
